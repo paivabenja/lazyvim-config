@@ -23,3 +23,8 @@ vim.keymap.set("n", "<A-k>", nvim_tmux_nav.NvimTmuxNavigateUp)
 vim.keymap.set("n", "<A-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
 vim.keymap.set("n", "<A-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
 vim.keymap.set("n", "<A-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
+
+-- Nvim Multi Cursor
+vim.keymap.set("n", "<C-LeftMouse>", "<Plug>(VM-Mouse-Cursor)")
+vim.keymap.set("n", "<C-RightMouse>", "<Plug>(VM-Mouse-Word)")
+vim.keymap.set("n", "<M-C-RightMouse>", "<Plug>(VM-Mouse-Column)")
