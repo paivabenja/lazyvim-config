@@ -32,5 +32,17 @@ vim.keymap.set({ "n", "t" }, "<A-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
 
 -- Nvim Multi Cursor
 vim.keymap.set("n", "<C-LeftMouse>", "<Plug>(VM-Mouse-Cursor)")
+
 vim.keymap.set("n", "<C-RightMouse>", "<Plug>(VM-Mouse-Word)")
 vim.keymap.set("n", "<M-C-RightMouse>", "<Plug>(VM-Mouse-Column)")
+
+-- Neo Tree
+
+vim.keymap.del("n", "<leader>e")
+vim.keymap.set("n", "<C-b>", function()
+  require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+end)
+
+vim.keymap.set("n", "<C-p>", function()
+  vim.cmd([[Telescope find_files]])
+end)
